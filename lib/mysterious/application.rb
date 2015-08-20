@@ -4,6 +4,7 @@ module Mysterious
     extend self
 
     extension Spine::Routing::Engine
+    extension Spine::Authorisation::Engine
     extension Spine::Logging::Engine
 
     def active_record
