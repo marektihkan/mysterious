@@ -6,10 +6,7 @@ module Mysterious
         include Responses
         include Authentication
         include Serialization
-
-        def format
-          Spine::ContentTypes::Json
-        end
+        include DefaultFormat
       end
     end
   end
