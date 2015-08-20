@@ -5,6 +5,10 @@ module Mysterious
         @current_user
       end
 
+      def context
+        @context = UserContext.new(current_user)
+      end
+
       def authenticate
         @current_user = find_user_by_token
         unauthorised and return false unless current_user
