@@ -7,6 +7,7 @@ module Mysterious
         include Authentication
         include Serialization
         include DefaultFormat
+        include ContextResponses
       end
     end
   end
