@@ -5,17 +5,10 @@ module Mysterious
         include Spine::Hub::Subscriber
         include Responses
         include Authentication
+        include Serialization
 
         def format
           Spine::ContentTypes::Json
-        end
-
-        def serialize(model, *mappings)
-          Serializers.find(*mappings).map(model)
-        end
-
-        def serialize_all(models, *mappings)
-          Serializers.find(*mappings).map_all(models)
         end
       end
     end
