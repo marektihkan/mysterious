@@ -10,7 +10,7 @@ module Mysterious
             service.subscribe(self)
             service.call(parameters)
           end
-          
+
           def on_task_added(task)
             success(serialize(:task, task))
           end
