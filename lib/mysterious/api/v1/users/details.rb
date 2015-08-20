@@ -14,11 +14,10 @@ module Mysterious
           end
 
           def on_user_found(user)
-            success(serialize(:user, user))
+            success(serialize(user, :user))
           end
         end
       end
     end
   end
 end
-
