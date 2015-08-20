@@ -4,7 +4,7 @@ module Mysterious
       module Tasks
         class Add < Action
           def action
-            service = Tasks::Add.new
+            service = Tasks::Add.new(context)
             service.subscribe(self)
             service.call(parameters)
           end
