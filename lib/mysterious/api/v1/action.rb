@@ -4,6 +4,7 @@ module Mysterious
       class Action < Spine::Actions::Action
         include Spine::Hub::Subscriber
         include Responses
+        include Authentication
 
         def format
           Spine::ContentTypes::Json
