@@ -12,7 +12,7 @@ module Mysterious
           end
 
           def on_task_added(task)
-            success(serialize(:task, task))
+            success(serialize(task, :task))
           end
 
           def on_task_adding_failed(task)
