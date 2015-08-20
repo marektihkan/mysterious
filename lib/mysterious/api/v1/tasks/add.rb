@@ -3,6 +3,8 @@ module Mysterious
     module V1
       module Tasks
         class Add < Action
+          before :authenticate
+
           def action
             service = Tasks::Add.new(context)
             service.subscribe(self)
