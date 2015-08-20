@@ -3,10 +3,12 @@ module Mysterious
     class UserContext
       include Spine::Authorisation::Context
 
-      attr_reader :subject
+      attr_reader :user
+
+      alias :subject :user
 
       def initialize(user)
-        @subject = user
+        @user = user
       end
 
       def role
