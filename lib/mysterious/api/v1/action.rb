@@ -3,6 +3,7 @@ module Mysterious
     module V1
       class Action < Spine::Actions::Action
         include Spine::Hub::Subscriber
+        include Spine::Parameters::Action
         include Responses
         include Authentication
         include Serialization
