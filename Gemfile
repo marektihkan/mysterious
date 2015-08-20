@@ -20,6 +20,7 @@ gem 'spine-actions'
 gem 'spine-parameters'
 gem 'spine-hub'
 gem 'spine-mappings'
+gem 'spine-authorisation'
 
 group :test, :development do
   gem "rspec"

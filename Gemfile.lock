@@ -48,6 +48,10 @@ GEM
     spine-actions (0.1.0)
       rack (~> 1.6)
       spine-content_types (~> 0.1)
+    spine-authorisation (0.1.0)
+      spine-hub (~> 0.1)
+      spine-permissions (~> 0.1)
+      spine-restrictions (~> 0.1)
     spine-content_types (0.1.2)
       multi_json (~> 1.0)
     spine-engines (0.1.0)
@@ -57,6 +61,8 @@ GEM
     spine-mappings (0.1.0)
     spine-parameters (0.2.0)
       spine-symbolize (~> 0.1)
+    spine-permissions (0.1.0)
+    spine-restrictions (0.1.0)
     spine-routing (0.3.1)
       rack (~> 1.6)
     spine-symbolize (0.1.0)
@@ -80,6 +86,7 @@ DEPENDENCIES
   rake
   rspec
   spine-actions
+  spine-authorisation
   spine-engines
   spine-hub
   spine-logging
