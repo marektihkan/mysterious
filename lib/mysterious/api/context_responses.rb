@@ -2,7 +2,7 @@ module Mysterious
   module Api
     module ContextResponses
       def on_denied(context, action, resource)
-        unauthorised
+        forbidden
       end
     end
   end
