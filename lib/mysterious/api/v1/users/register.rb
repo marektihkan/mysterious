@@ -14,7 +14,7 @@ module Mysterious
           end
 
           def on_registered(user)
-            success(serialize(:user, user))
+            success(serialize(user, :user))
           end
         end
       end
