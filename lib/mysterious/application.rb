@@ -10,5 +10,9 @@ module Mysterious
     def active_record
       ::ActiveRecord::Base
     end
+
+    def passwords
+      ::Mysterious::Users::Passwords
+    end
   end
 end
