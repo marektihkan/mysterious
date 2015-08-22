@@ -7,11 +7,11 @@ module Mysterious
 
       def password=(value)
         @password = value
-        self.passwor_hash = Passwords.hash(value) if value
+        self.password_hash = Passwords.hash(value) if value
       end
 
       def valid_password?(password)
-        Passwords.compare(password, passwor_hash)
+        Passwords.compare(password, password_hash)
       end
     end
   end
