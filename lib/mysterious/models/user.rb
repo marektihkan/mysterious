@@ -5,7 +5,7 @@ module Mysterious
 
       self.table_name = 'users'
 
-      validates :name, presence: true, length: { max: 255 }
+      validates :name, presence: true, length: { maximum: 255 }
       validates :email,
         presence: true,
         uniqueness: true,
