@@ -7,11 +7,9 @@ module Mysterious
       end
 
       def call
-        return unless user
-
-        user.extend(PasswordAuthenticable)
-        return unless user.valid_password?(password)
-        user
+        if user && user.valid_password?(password)
+          user
+        end
       end
 
       private
