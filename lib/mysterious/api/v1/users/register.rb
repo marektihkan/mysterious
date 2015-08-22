@@ -4,9 +4,9 @@ module Mysterious
       module Users
         class Register < Action
           def action
-            service = Users::Register.new
+            service = Mysterious::Users::Register.new
             service.subscribe(self)
-            service.call(parameters)
+            service.call(parameters.symbolized)
           end
 
           def on_registration_failed(user)
