@@ -6,7 +6,7 @@ module Mysterious
       def call(attributes)
         user = Models::User.new(attributes)
         if user.save
-          publish(:registerd, user)
+          publish(:registered, user)
         else
           publish(:registration_failed, user)
         end
