@@ -26,7 +26,7 @@ module Mysterious
 
       def find_user_by_token
         if token.valid?
-          Users::Authenticate.new(token.username, token.password) rescue nil
+          Users::Authenticate.new(token.username, token.password).call
         else
           Users::Visitor
         end
