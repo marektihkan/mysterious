@@ -3,6 +3,8 @@ source 'http://rubygems.org'
 gem 'rake'
 gem 'rack'
 
+gem 'bcrypt'
+
 # Data
 gem 'activerecord', require: 'active_record'
 gem 'pg'
