@@ -10,6 +10,7 @@ Mysterious::Application.configure do |config|
   config.root = File.expand_path('../..', __FILE__)
 
   config.load_paths = %w(
+    lib/mysterious/users/password_authenticable.rb
     lib/mysterious/api/v1/serializers
     lib/mysterious/**/*.rb
   )
