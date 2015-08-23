@@ -22,6 +22,7 @@ gem 'spine-actions'
 gem 'spine-parameters'
 gem 'spine-hub'
 gem 'spine-mappings'
+gem 'spine-transform'
 gem 'spine-authorisation'
 
 group :test, :development do

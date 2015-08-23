@@ -67,6 +67,7 @@ GEM
     spine-routing (0.3.1)
       rack (~> 1.6)
     spine-symbolize (0.1.0)
+    spine-transform (0.1.1)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -95,6 +96,7 @@ DEPENDENCIES
   spine-mappings
   spine-parameters
   spine-routing
+  spine-transform
 
 BUNDLED WITH
    1.10.5
