@@ -3,6 +3,7 @@ module Mysterious
     module V1
       module Serializers
         define :task do
+          integer :id
           string :name
           date :due, nullable: true
           boolean(:completed) { |source| !!source.completed_at }
