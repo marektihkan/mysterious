@@ -15,3 +15,5 @@ Run application `puma -p 3000`
 ## Usage
 
 See `config/routes.rb` file to see all available API endpoints
+
+You can use curl to make request to those endpoints. Just add `-H "Authorization: Base64(username:password)"` with your own credentials.
