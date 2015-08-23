@@ -11,7 +11,7 @@ module Mysterious
 
       def authenticate
         @current_user = find_user_by_token
-        unauthorised and return false unless current_user
+        unauthorized and return false unless current_user
       end
 
       def token
@@ -27,8 +27,6 @@ module Mysterious
       def find_user_by_token
         if token.valid?
           Users::Authenticate.new(token.username, token.password).call
-        else
-          Users::Visitor
         end
       end
     end
