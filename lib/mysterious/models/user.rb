@@ -5,6 +5,8 @@ module Mysterious
 
       self.table_name = 'users'
 
+      has_many :tasks
+
       validates :name, presence: true, length: { maximum: 255 }
       validates :email,
         presence: true,
