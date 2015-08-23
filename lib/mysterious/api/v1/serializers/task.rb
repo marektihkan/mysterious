@@ -4,7 +4,7 @@ module Mysterious
       module Serializers
         define :task do
           string :name
-          date :due
+          date :due, nullable: true
           boolean(:completed) { |source| !!source.completed_at }
           integer :user_id
           timestamp :created_at
