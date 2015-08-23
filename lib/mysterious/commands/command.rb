@@ -7,7 +7,7 @@ module Mysterious
 
       def initialize(context)
         @context = context
-        context.subcribe(self)
+        context.subscribe(self)
       end
     end
   end
