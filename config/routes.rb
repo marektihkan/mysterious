@@ -14,6 +14,8 @@ module Mysterious
         post '', to: Api::V1::Tasks::Add
 
         get ':id', to: Api::V1::Tasks::Details
+        put ':id', to: Api::V1::Tasks::Update
+        patch ':id', to: Api::V1::Tasks::Update
       end
     end
   end
