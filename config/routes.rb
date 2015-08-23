@@ -5,6 +5,7 @@ module Mysterious
       get :me, to: Api::V1::Users::Me
 
       scope :users do
+        get '', to: Api::V1::Users::List
         get ':id', to: Api::V1::Users::Details
       end
     end
