@@ -16,6 +16,7 @@ module Mysterious
         get ':id', to: Api::V1::Tasks::Details
         put ':id', to: Api::V1::Tasks::Update
         patch ':id', to: Api::V1::Tasks::Update
+        delete ':id', to: Api::V1::Tasks::Remove
       end
     end
   end
