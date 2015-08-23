@@ -1,0 +1,10 @@
+Mysterious::Application.configure do |config|
+  config.passwords.pepper = 'f836afcd9bddffed1627a39dbee8df69a54db61f'
+
+  config.active_record.establish_connection(
+    adapter: 'postgresql',
+    database: 'mysterious_development',
+    pool: 5,
+    user: 'mysterious'
+  )
+end
