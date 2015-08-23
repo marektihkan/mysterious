@@ -4,9 +4,9 @@ module Mysterious
       module Users
         class Details < Action
           def action
-            service = Users::Finder.new
+            service = Mysterious::Users::Repository.new
             service.subscribe(self)
-            service.call(parameters[:id])
+            service.find(parameters.symbolized[:id])
           end
 
           def on_user_not_found(identity)
