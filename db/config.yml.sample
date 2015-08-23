@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: mysterious_development
+  pool: 5
+  username: mysterious
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: mysterious_test
+  username: mysterious
