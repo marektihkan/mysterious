@@ -5,7 +5,7 @@ module Mysterious
         define :task do
           string :name
           date :due
-          boolean(:done) { |source| !!source.done_at }
+          boolean(:completed) { |source| !!source.completed_at }
           integer :user_id
           timestamp :created_at
           timestamp :updated_at
