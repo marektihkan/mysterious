@@ -13,6 +13,12 @@ module Mysterious
         user
       end
 
+      def all
+        result = users.all
+        publish(:users_found, result)
+        result
+      end
+
       private
 
       def users
