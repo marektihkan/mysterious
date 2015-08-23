@@ -3,6 +3,7 @@ module Mysterious
     module V1
       module Serializers
         define :user do
+          integer :id
           string :name
           string :email
           timestamp :created_at
