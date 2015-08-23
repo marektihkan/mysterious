@@ -11,6 +11,8 @@ module Mysterious
 
       scope :tasks do
         get '', to: Api::V1::Tasks::List
+        post '', to: Api::V1::Tasks::Add
+
         get ':id', to: Api::V1::Tasks::Details
       end
     end
