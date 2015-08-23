@@ -8,6 +8,11 @@ module Mysterious
         get '', to: Api::V1::Users::List
         get ':id', to: Api::V1::Users::Details
       end
+
+      scope :tasks do
+        get '', to: Api::V1::Tasks::List
+        get ':id', to: Api::V1::Tasks::Details
+      end
     end
   end
 end
