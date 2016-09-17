@@ -6,7 +6,7 @@ gem 'rack'
 gem 'bcrypt'
 
 # Data
-gem 'activerecord', require: 'active_record'
+gem 'activerecord', "~> 4.2", require: 'active_record'
 gem 'pg'
 gem 'oj'
 
