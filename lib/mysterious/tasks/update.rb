@@ -1,6 +1,8 @@
 module Mysterious
   module Tasks
     class Update < Commands::ContextAware
+      include Finders::ByIdentity
+
       def call(identity, attributes)
         return nil unless context.authorize(:write, :tasks)
 
@@ -8,20 +10,14 @@ module Mysterious
         return unless task
 
         if task.update_attributes(filter(attributes))
-          publish(:task_updated, task)
+          publish(:task_updated, context, task)
         else
-          publish(:task_updating_failed, task)
+          publish(:task_updating_failed, context, task)
         end
         task
       end
 
       private
-
-      def find_task(identity)
-        task = context.tasks.find_by(id: identity)
-        publish(:task_not_found, identity) unless task
-        task
-      end
 
       def filter(attributes)
         Filter.transform(attributes)
