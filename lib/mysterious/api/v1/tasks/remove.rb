@@ -11,11 +11,11 @@ module Mysterious
             service.call(parameters[:id])
           end
 
-          def on_task_not_found(identity)
+          def on_task_not_found(_context, _identity)
             not_found
           end
 
-          def on_task_removed(task)
+          def on_task_removed(_context, _task)
             success
           end
         end

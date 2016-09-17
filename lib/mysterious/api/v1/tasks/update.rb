@@ -11,15 +11,15 @@ module Mysterious
             service.call(parameters[:id], parameters.symbolized)
           end
 
-          def on_task_not_found(identity)
+          def on_task_not_found(_context, _identity)
             not_found
           end
 
-          def on_task_updated(task)
+          def on_task_updated(_context, task)
             success(serialize(task, :task))
           end
 
-          def on_task_updating_failed(task)
+          def on_task_updating_failed(_context, task)
             validation_failed(task.errors)
           end
         end
