@@ -1,6 +1,6 @@
 module Mysterious
   module Tasks
-    class Add < Commands::Command
+    class Add < Commands::ContextAware
       def call(attributes)
         return nil unless context.authorize(:write, :tasks)
 

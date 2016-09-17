@@ -1,6 +1,6 @@
 module Mysterious
   module Tasks
-    class Update < Commands::Command
+    class Update < Commands::ContextAware
       def call(identity, attributes)
         return nil unless context.authorize(:write, :tasks)
 

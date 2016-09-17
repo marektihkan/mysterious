@@ -1,6 +1,6 @@
 module Mysterious
   module Tasks
-    class Remove < Commands::Command
+    class Remove < Commands::ContextAware
       def call(identity)
         return nil unless context.authorize(:delete, :tasks)
 

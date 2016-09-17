@@ -1,6 +1,6 @@
 module Mysterious
   module Commands
-    class Command
+    class ContextAware
       include Spine::Hub::Repeater
 
       attr_reader :context
