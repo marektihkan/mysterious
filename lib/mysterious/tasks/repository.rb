@@ -27,4 +27,3 @@ module Mysterious
     end
   end
 end
-
