@@ -22,7 +22,7 @@ module Mysterious
       private
 
       def tasks
-        Models::Task
+        Tasks::Task
       end
     end
   end

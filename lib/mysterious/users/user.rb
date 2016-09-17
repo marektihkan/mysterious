@@ -1,11 +1,13 @@
 module Mysterious
-  module Models
+  module Users
     class User < ActiveRecord::Base
       include Users::PasswordAuthenticable
 
       self.table_name = 'users'
 
-      has_many :tasks
+      has_many :tasks,
+        class_name: 'Tasks::Task',
+        foreign_key: 'user_id'
 
       validates :name, presence: true, length: { maximum: 255 }
       validates :email,

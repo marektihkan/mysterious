@@ -4,7 +4,7 @@ module Mysterious
       include Spine::Hub::Publisher
 
       def call(attributes)
-        user = Models::User.new(filter(attributes))
+        user = Users::User.new(filter(attributes))
         if user.save
           publish(:registered, user)
         else

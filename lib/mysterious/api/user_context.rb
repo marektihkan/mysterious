@@ -28,7 +28,7 @@ module Mysterious
 
       module Admin
         def tasks
-          Models::Task
+          Tasks::Task
         end
       end
 

@@ -21,7 +21,7 @@ module Mysterious
       end
 
       def find_user
-        Models::User.find_by(email: username)
+        Users::User.find_by(email: username)
       end
     end
   end

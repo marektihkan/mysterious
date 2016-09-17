@@ -22,7 +22,7 @@ module Mysterious
       private
 
       def users
-        Models::User
+        Users::User
       end
     end
   end
