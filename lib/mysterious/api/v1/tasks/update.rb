@@ -6,9 +6,8 @@ module Mysterious
           before :authenticate
 
           def action
-            service = Mysterious::Tasks::Update.new(context)
-            service.subscribe(self)
-            service.call(parameters[:id], parameters.symbolized)
+            command(Mysterious::Tasks::Update)
+              .call(parameters[:id], parameters.symbolized)
           end
 
           def on_task_not_found(_context, _identity)

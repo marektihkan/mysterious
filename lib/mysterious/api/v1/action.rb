@@ -10,6 +10,7 @@ module Mysterious
         include Serialization
         include DefaultFormat
         include ContextResponses
+        include CommandBuilder
       end
     end
   end

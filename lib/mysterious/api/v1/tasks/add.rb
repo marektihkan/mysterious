@@ -7,9 +7,7 @@ module Mysterious
           before :validate
 
           def action
-            service = Mysterious::Tasks::Add.new(context)
-            service.subscribe(self)
-            service.call(parameters.symbolized)
+            command(Mysterious::Tasks::Add).call(parameters.symbolized)
           end
 
           def on_task_added(task)
