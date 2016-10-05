@@ -1,6 +1,8 @@
 module Mysterious
   module Users
     class Authenticate
+      include Finders::ByEmail
+
       def initialize(username, password)
         @username = username
         @password = password
@@ -17,11 +19,7 @@ module Mysterious
       attr_reader :username, :password
 
       def user
-        @user ||= find_user
-      end
-
-      def find_user
-        Users::User.find_by(email: username)
+        @user ||= find_user(username)
       end
     end
   end
